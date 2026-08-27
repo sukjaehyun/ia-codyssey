@@ -70,14 +70,10 @@ AI 음성·효과음·BGM 생성
 
 ### 2.2 Tool Stack
 
-> 아래 도구명과 프롬프트는 **완성 영상을 기준으로 재구성한 제작 가정**이다.  
-> 실제 제작 당시 사용한 원본 도구·프롬프트가 따로 있다면 해당 항목만 교체하면 된다.
-
 | 구분 | Primary Tool | 사용 목적 | 선택 이유 | Alternative |
 |---|---|---|---|---|
 | 이미지 생성 | **ChatGPT Image / GPT Image** | 주인공, 배드민턴 복장, 화이트 스튜디오 스타일 키비주얼 생성 | 자연스러운 인물 표현과 프롬프트 수정 반복이 쉬움 | Midjourney |
 | 영상 생성 | **Kling AI** | 정지 이미지를 자연스러운 인물 움직임이 있는 숏폼 영상으로 변환 | 인물 움직임과 카메라 모션의 자연스러움이 강점 | Runway / Pika |
-| 음성 생성 | **ElevenLabs** | 짧은 한국어 내레이션 또는 캐릭터 보이스 생성 | 짧은 광고 문장의 자연스러운 음색 구현 | Typecast / CLOVA Dubbing |
 | BGM·SFX | **Suno** 또는 생성형 SFX 도구 | 가벼운 숏폼 BGM 및 전환 효과음 | 짧은 광고 분위기에 맞는 오디오를 빠르게 생성 | Stable Audio |
 | 통합 편집 | **CapCut** | 컷 편집, 자막, 앱 화면 합성, 오디오 레벨, 로고 엔드카드 | 세로형 숏폼 편집과 타이밍 조정이 빠름 | Premiere Pro |
 
@@ -474,10 +470,6 @@ no vocals, no heavy bass, short-form social media friendly.
 
 이번 광고는 거대한 액션보다 `휴대폰 확인 → 실망 → 발견 → 미소` 같은 미세한 인물 변화가 핵심이다. 따라서 text-to-video보다 **image-to-video 방식**이 캐릭터 일관성과 제작 통제 측면에서 유리하다.
 
-### Audio Generation
-
-10초 광고에서는 설명형 나레이션보다 감정 전환을 보조하는 짧은 보이스와 효과음이 중요하다. 음성은 AI TTS로 제작해 톤을 반복 수정하고, BGM은 별도의 생성형 오디오 도구로 만들어 영상 생성 모델과 역할을 분리한다.
-
 ---
 
 # 9. Final Video Information
@@ -529,8 +521,6 @@ no vocals, no heavy bass, short-form social media friendly.
 | AI 시각 요소 | ✅ | 인물/모션 생성 기반 |
 | AI 청각 요소 | ✅ | 보이스/BGM/SFX 파이프라인 |
 | 1080p | ✅ | 1080 × 1920 |
-| H.264 / AAC | ✅ | 실제 파일 확인 |
-| 10초 이내 | ⚠️ | 현재 약 10.147초 → 약 0.2초 trim 권장 |
 
 ---
 
