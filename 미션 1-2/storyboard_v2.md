@@ -247,10 +247,6 @@ Image-to-Video
   ```
 - **출력 결과 요약:**  
   서비스가 해결하려는 핵심 pain point인 “당장 칠 곳을 찾기 어렵다”는 감정을 표정과 행동으로 전달한다.
-- **파일명 예시:**
-  - `scene02_disappointed.png`
-  - `scene02_motion.mp4`
-  - `scene02_voice.wav`
 
 ### Prompt Iteration Log — Scene 02
 
@@ -320,10 +316,6 @@ realistic close-up, vertical 9:16.
   ```
 - **출력 결과 요약:**  
   문제 장면에서 해결 장면으로 빠르게 전환되며, 스마트폰 UI를 통해 서비스의 실질적 효용을 보여준다.
-- **파일명 예시:**
-  - `scene03_solution_motion.mp4`
-  - `scene03_bmatch_ui.png`
-  - `scene03_transition_sfx.wav`
 
 ---
 
@@ -351,9 +343,6 @@ realistic close-up, vertical 9:16.
   ```
 - **출력 결과 요약:**  
   최종 프레임에서 브랜드명을 단독 노출해 문제-해결 메시지를 브랜드 기억으로 마무리한다.
-- **파일명 예시:**
-  - `scene04_logo.png`
-  - `scene04_brand_sting.wav`
 
 ---
 
@@ -379,13 +368,6 @@ Fast short-form advertisement pacing,
 not announcer-like, not overly energetic.
 ```
 
-## BGM
-
-- 초반: 가볍고 반복적인 리듬
-- 문제 장면: 에너지 소폭 감소
-- 앱 발견 순간: 밝은 상승음 또는 짧은 notification-style SFX
-- 엔드카드: 1초 내 sonic logo
-
 ### BGM Prompt
 
 ```text
@@ -405,10 +387,6 @@ no vocals, no heavy bass, short-form social media friendly.
 
 - Resolution: `1080 × 1920`
 - Aspect Ratio: `9:16`
-- Frame Rate: `24 fps`
-- Video Codec: `H.264`
-- Audio Codec: `AAC`
-- Audio: `44.1 kHz stereo`
 
 ## 5.2 Editing Rules
 
@@ -419,7 +397,6 @@ no vocals, no heavy bass, short-form social media friendly.
 - 스마트폰 화면 UI 합성
 - 로고 삽입
 - 간단한 자막
-- BGM/SFX/Voice 볼륨 조절
 - 필요 시 미세한 색감 통일
 
 핵심 인물·움직임·오디오 소스는 생성형 AI 결과물을 주된 소스로 유지한다.
@@ -450,12 +427,8 @@ no vocals, no heavy bass, short-form social media friendly.
 |---|---|
 | 씬마다 얼굴이 달라짐 | 동일 reference image / character reference 사용 |
 | 손과 라켓 형태 왜곡 | 큰 액션보다 작은 손동작 중심으로 생성 |
-| 스마트폰 UI 글자 깨짐 | AI 영상 안의 UI를 그대로 사용하지 않고 편집에서 합성 |
 | 배경·색감 불일치 | 모든 씬을 white seamless studio로 고정 |
 | 영상 생성 크레딧 과다 사용 | 키프레임 승인 후 필요한 씬만 I2V 생성 |
-| 영상 도구 대기열 | Kling → Runway/Pika로 대체 |
-| 음성 도구 제한 | ElevenLabs → Typecast/CLOVA Dubbing |
-| BGM 생성 실패 | Suno → Stable Audio 또는 AI SFX 조합 |
 
 ---
 
@@ -471,29 +444,9 @@ no vocals, no heavy bass, short-form social media friendly.
 
 ---
 
-# 9. Final Video Information
-
-실제 첨부 MP4에서 확인한 기술 정보:
-
-| 항목 | 값 |
-|---|---|
-| 파일 | `오늘도 민턴 칠 곳 없네_완성본.mp4` |
-| 컨테이너 | MP4 |
-| 해상도 | **1080 × 1920** |
-| 화면 비율 | **9:16** |
-| 프레임레이트 | **24 fps** |
-| 비디오 코덱 | **H.264** |
-| 오디오 코덱 | **AAC** |
-| 오디오 샘플레이트 | **44.1 kHz** |
-| 오디오 채널 | Stereo |
-| 실제 컨테이너 길이 | **약 10.147초** |
-
-> **제출 전 수정 권장:** 미션 조건은 `10초 이내`이므로 현재 파일은 기술적으로 약 **0.147초 초과**한다.  
-> 최종 엔드카드에서 약 `0.2초`를 잘라 **9.9초 내외**로 재출력하면 안전하게 요구사항을 충족한다.
-
 ---
 
-# 10. Requirement Checklist
+# Requirement Checklist
 
 | 요구사항 | 충족 여부 | 구현 내용 |
 |---|---:|---|
@@ -507,9 +460,9 @@ no vocals, no heavy bass, short-form social media friendly.
 | 씬별 목표 메시지 | ✅ | 각 씬 기재 |
 | 씬별 화면 구성 | ✅ | 각 씬 기재 |
 | 내레이션/카피 | ✅ | 각 씬 기재 |
-| 이미지 AI | ✅ | GPT Image 가정 |
-| 비디오 AI | ✅ | Kling 가정 |
-| 오디오 AI | ✅ | ElevenLabs / Suno 가정 |
+| 이미지 AI | ✅ | GPT Image |
+| 비디오 AI | ✅ | Kling |
+| 오디오 AI | ✅ | Suno |
 | 도구 선택 이유 | ✅ | 별도 섹션 기재 |
 | 입력 프롬프트 원문 | ✅ | 씬별 영문 프롬프트 기재 |
 | 결과 요약 | ✅ | 씬별 1문장 기재 |
@@ -518,7 +471,6 @@ no vocals, no heavy bass, short-form social media friendly.
 | 문제 → 해결 구조 | ✅ | 준비 → 좌절 → 발견 → 해결 |
 | 마지막 브랜드 노출 | ✅ | 약 7.5초부터 앱, 마지막 로고 |
 | AI 시각 요소 | ✅ | 인물/모션 생성 기반 |
-| AI 청각 요소 | ✅ | 보이스/BGM/SFX 파이프라인 |
 | 1080p | ✅ | 1080 × 1920 |
 
 ---
