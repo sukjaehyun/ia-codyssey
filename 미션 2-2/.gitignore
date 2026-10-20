@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+results/*
+!results/README.md
+!results/sample_demo_raw.json
+!results/sample_demo_travel_plan.md
